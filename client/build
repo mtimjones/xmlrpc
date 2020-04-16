@@ -1,0 +1,5 @@
+#!/bin/sh
+PATH=$PATH:/usr/local/bin
+CLIENT_CFLAGS=`xmlrpc-c-config libwww-client --cflags`
+CLIENT_LIBS=`xmlrpc-c-config libwww-client --libs`
+gcc $CLIENT_CFLAGS -o client client.c $CLIENT_LIBS
